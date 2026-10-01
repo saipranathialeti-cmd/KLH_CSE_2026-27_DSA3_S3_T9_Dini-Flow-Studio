@@ -1,0 +1,343 @@
+/* PAGE HEADER */
+
+.page-header {
+    text-align: center;
+    padding: 50px 20px;
+    background: #eff6ff;
+}
+
+
+.page-header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+
+.page-header p {
+    color: #64748b;
+}
+
+
+/* CONTAINER */
+
+.network-container {
+    width: 86%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+
+/* CARD */
+
+.network-card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.network-card h2 {
+    margin-bottom: 25px;
+    color: #0f172a;
+}
+
+
+/* INPUT ROW */
+
+.input-row {
+    display: flex;
+    gap: 20px;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+
+.input-group {
+    flex: 1;
+    min-width: 180px;
+}
+
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    background: white;
+}
+
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+
+/* NODES */
+
+.nodes-section {
+    margin-top: 25px;
+}
+
+
+.nodes-section h3 {
+    margin-bottom: 12px;
+}
+
+
+.node-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.node-item {
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 10px 17px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+/* TABLE */
+
+.table-container {
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+th,
+td {
+    padding: 13px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+
+th {
+    background: #2563eb;
+    color: white;
+}
+
+
+td {
+    color: #475569;
+}
+
+
+/* DELETE */
+
+.delete-btn {
+    border: none;
+    background: #dc2626;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* ACTION */
+
+.action-card {
+    text-align: center;
+}
+
+
+/* RESULT */
+
+.result-box {
+    text-align: center;
+    padding: 30px;
+    margin: 20px 0;
+    background: #eff6ff;
+    border-radius: 10px;
+}
+
+
+.result-box p {
+    font-size: 18px;
+    color: #475569;
+}
+
+
+.result-box h1 {
+    font-size: 50px;
+    color: #2563eb;
+    margin-top: 10px;
+}
+
+
+#resultMessage {
+    text-align: center;
+    color: #64748b;
+    font-size: 16px;
+}
+
+
+/* DINIC STAGES */
+
+#stageContainer {
+    margin-top: 25px;
+}
+
+
+.stage-box {
+    background: #f8fafc;
+    border-left: 5px solid #2563eb;
+    padding: 22px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+.stage-box h3 {
+    color: #2563eb;
+    margin-bottom: 18px;
+}
+
+
+.stage-box h4 {
+    color: #334155;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+
+.stage-box p {
+    color: #475569;
+    line-height: 1.7;
+}
+
+
+.level-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.level-item {
+    padding: 10px 15px;
+    background: #dbeafe;
+    border-radius: 7px;
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+
+.blocking-flow {
+    font-size: 24px !important;
+    font-weight: bold;
+    color: #2563eb !important;
+}
+
+
+/* PERFORMANCE */
+
+.performance-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.performance-table th,
+.performance-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+
+.performance-table th {
+    background: #2563eb;
+    color: white;
+}
+
+
+.performance-table td {
+    color: #475569;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .network-container {
+        width: 94%;
+    }
+
+    .network-card {
+        padding: 20px;
+    }
+
+    .input-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+}
+/* NODE CONTAINER */
+
+.node-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* DELETE NODE BUTTON */
+
+.delete-node-btn {
+    border: none;
+    background: #dc2626;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+
+.delete-node-btn:hover {
+    background: #b91c1c;
+}
+
+
+.node-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}

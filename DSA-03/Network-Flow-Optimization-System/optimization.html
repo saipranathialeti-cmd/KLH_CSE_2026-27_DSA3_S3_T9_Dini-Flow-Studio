@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Network Optimization
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/network.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Network Flow Optimization
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="network.html">
+                    Create Network
+                </a>
+            </li>
+
+            <li>
+                <a href="optimization.html">
+                    Optimization
+                </a>
+            </li>
+
+            <li>
+                <a href="results.html">
+                    Results
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- HEADER -->
+
+    <header class="page-header">
+
+        <h1>
+            Network Optimization
+        </h1>
+
+        <p>
+            Dinic's Algorithm
+        </p>
+
+    </header>
+
+
+    <main class="network-container">
+
+
+        <!-- SUMMARY -->
+
+        <section class="network-card">
+
+            <h2>
+                Network Summary
+            </h2>
+
+            <div class="input-row">
+
+                <div class="input-group">
+
+                    <label>
+                        Number of Nodes
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nodeCount"
+                        readonly
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Number of Connections
+                    </label>
+
+                    <input
+                        type="text"
+                        id="edgeCount"
+                        readonly
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOURCE SINK -->
+
+        <section class="network-card">
+
+            <h2>
+                Select Source and Destination
+            </h2>
+
+            <div class="input-row">
+
+                <div class="input-group">
+
+                    <label>
+                        Source Node
+                    </label>
+
+                    <select id="sourceNode">
+
+                        <option value="">
+                            Select Source
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Destination Node
+                    </label>
+
+                    <select id="destinationNode">
+
+                        <option value="">
+                            Select Destination
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <br>
+
+
+            <button
+                class="primary-btn"
+                onclick="runOptimization()"
+            >
+                Run Dinic's Algorithm
+            </button>
+
+        </section>
+
+
+        <!-- MAX FLOW -->
+
+        <section class="network-card">
+
+            <h2>
+                Maximum Flow Result
+            </h2>
+
+            <div class="result-box">
+
+                <p>
+                    Maximum Flow
+                </p>
+
+                <h1 id="maxFlow">
+                    0
+                </h1>
+
+                <p id="resultMessage">
+                    Run the optimization to calculate
+                    maximum flow.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DINIC STAGES -->
+
+        <section class="network-card">
+
+            <h2>
+                Dinic's Algorithm Execution
+            </h2>
+
+            <p>
+                Each phase first constructs a level graph
+                using BFS and then finds a blocking flow
+                using DFS.
+            </p>
+
+
+            <div id="stageContainer">
+
+            </div>
+
+        </section>
+
+
+        <!-- PERFORMANCE -->
+
+        <section class="network-card">
+
+            <h2>
+                Dinic vs Edmonds-Karp
+            </h2>
+
+            <div class="table-container">
+
+                <table
+                    class="performance-table"
+                >
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Algorithm
+                            </th>
+
+                            <th>
+                                Maximum Flow
+                            </th>
+
+                            <th>
+                                Execution Time
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Dinic's Algorithm
+                            </td>
+
+                            <td id="dinicFlowResult">
+                                -
+                            </td>
+
+                            <td id="dinicTimeResult">
+                                -
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Edmonds-Karp
+                            </td>
+
+                            <td id="ekFlowResult">
+                                -
+                            </td>
+
+                            <td id="ekTimeResult">
+                                -
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS -->
+
+        <section class="network-card action-card">
+
+            <button
+                class="primary-btn"
+                onclick="goToResults()"
+            >
+                View Detailed Results →
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Network Flow Optimization System
+        </p>
+
+    </footer>
+
+
+    <script src="js/algorithms.js"></script>
+
+</body>
+
+</html>
